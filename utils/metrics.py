@@ -27,9 +27,9 @@ class experiment():
 
     def __init__(self, name):
         self.name = name
-
-        if Path(os.path.dirname(os.getcwd())+'/Experiments/'+name).exists():
-            self.path = Path(os.path.dirname(os.getcwd())+'/Experiments/'+name)
+        print(Path(os.path.dirname(os.getcwd())+name))
+        if Path(os.path.dirname(os.getcwd())+name).exists():
+            self.path = Path(os.path.dirname(os.getcwd())+name)
         else:
             raise ValueError("directory not found")
 
@@ -194,7 +194,7 @@ class experiment():
                 "k": tr.get('k'),
                 "m": tr.get("m"),
                 "t_oc": tr.get('t_oc'),
-                "operator_cyling": tr.get('operator_cycling'),
+                "operator_cycling": tr.get('operator_cycling'),
                 "local": tr.get('local'),
                 "FISC": tr.get('FISC'),
                 "duration": datetime.timedelta(seconds=tr['time_end'] - tr['time_start']).total_seconds(),

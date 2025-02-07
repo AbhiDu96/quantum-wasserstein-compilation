@@ -25,3 +25,19 @@ To finally test the running of the script for known examples you can just run th
 ```python
 python main.py
 ```
+
+### Citation
+
+If you use ```quantum-wasserstein-compilation``` or results from the paper, please cite our work as
+
+```bibtex
+@misc{richter2025quantumwassersteincompilationunitary,
+      title={Quantum Wasserstein Compilation: Unitary Compilation using the Quantum Earth Mover's Distance}, 
+      author={Marvin Richter and Abhishek Y. Dubey and Axel Plinge and Christopher Mutschler and Daniel D. Scherer and Michael J. Hartmann},
+      year={2025},
+      eprint={2409.05849},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2409.05849}, 
+}
+```

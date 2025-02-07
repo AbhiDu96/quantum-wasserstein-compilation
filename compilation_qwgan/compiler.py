@@ -193,20 +193,6 @@ class Generator(QuantumCircuit):
 
         return self
 
-    def resume(self):
-        """Resume compilation."""
-
-        self.resuming = True
-
-        print(f"resuming {self.training['run_id']}. {self.training['t']} / {self.training['T']}")
-
-        self.compile(
-            target_qc=self.target,
-            method=self.training["method"],
-            t=self.training["t"],
-            T=self.training["T"],
-        )
-
     def _LET_compile(
         self,
         target: QuantumCircuit,
@@ -343,7 +329,7 @@ class Generator(QuantumCircuit):
                 gradvalues = -np.sum(all_zero_grads_per_state, axis=1) / s
                 # LET global cost = 1 - Prob(00..00)
                 # C_LET = np.array(mp_result_probs)[0]
-                self.training["C_LET"].append(C_LET)
+                self.training["C_LET"].append(C_LET.item())
 
             self.theta = self.optim.update(parameter_values=self.theta, gradient_values=gradvalues)
 
@@ -1203,9 +1189,6 @@ def gen_from_pickle(file_path: Path, resume=True, delete_pickle=True):
 
     if delete_pickle:
         file_path.unlink()
-
-    if resume:
-        gen.resume()
 
     return gen
 
