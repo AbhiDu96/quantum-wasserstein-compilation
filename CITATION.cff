@@ -1,0 +1,49 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: quantum-wasserstein-compilation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Marvin
+    family-names: Richter
+    email: marvin.richter@chalmers.se
+    affiliation: Chalmers University of Technology
+  - given-names: Abhishek Y.
+    family-names: Dubey
+    email: abhishek.yogendra.dubey@iis.fraunhofer.de
+    affiliation: Fraunhofer IIS
+identifiers:
+  - type: url
+    value: 'https://arxiv.org/abs/2409.05849'
+    description: The ArXiv version of the paper
+repository-code: >-
+  https://github.com/AbhiDu96/quantum-wasserstein-compilation
+abstract: >-
+  In this work, we present a VQCC-objective function called
+  the quantum Wasserstein compilation (QWC) cost function
+  based on the quantum Wasserstein distance of order 1. We
+  show that the QWC cost function upper bounds the average
+  infidelity of two circuits. An estimation method based on
+  measurements of local Pauli-observable is utilized in a
+  generative adversarial network to learn a given quantum
+  circuit. We demonstrate the efficacy of the QWC cost
+  function by compiling hardware efficient ansatz (HEA) as
+  both the target and the ansatz and comparing it to cost
+  functions such as the Loschmidt echo test (LET) and the
+  Hilbert-Schmidt test (HST). Finally, our experiments
+  demonstrate that QWC as a cost function is the least
+  affected by barren plateaus when compared to LET and HST
+  for deep enough circuits.
+keywords:
+  - Quantum Wasserstein Distance
+  - Generative Adversarial Network
+  - Local Pauli-observable
+  - Variational Quantum Circuit Compilation
+license: Apache-2.0
+commit: Initial commit
+version: '0.1'
+date-released: '2025-04-14'
